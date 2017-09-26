@@ -16,7 +16,9 @@ namespace server
         public int Port { get; set; }
         public double Lat { get; set; }
         public double Long { get; set; }
-        public double Usage { get; set; }
+        public int Players { get; set; }
+        public int MaxPlayers { get; set; }
+        public int Queued { get; set; }
         public bool AdminOnly { get; set; }
 
         public XElement ToXml()
@@ -28,7 +30,9 @@ namespace server
                     new XElement("Port", Port),
                     new XElement("Lat", Lat),
                     new XElement("Long", Long),
-                    new XElement("Usage", Usage),
+                    new XElement("Players", Players),
+                    new XElement("MaxPlayers", MaxPlayers),
+                    new XElement("Queued", Queued),
                     new XElement("AdminOnly", AdminOnly)
                 );
         }

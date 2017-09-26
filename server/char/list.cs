@@ -22,7 +22,9 @@ namespace server.@char
                     Long = server.coordinates.longitude,
                     Port = server.port,
                     DNS = server.address,
-                    Usage = server.players / (float)server.maxPlayers,
+                    Players = server.players,
+                    MaxPlayers = server.maxPlayers,
+                    Queued = server.queueLength,
                     AdminOnly = server.adminOnly
                 });
             }
